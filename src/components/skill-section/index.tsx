@@ -32,7 +32,7 @@ const skills = [
 export default function SkillSection() {
 	const { width } = useWindowDimensions();
 	return (
-		<section className="max-w-6xl mx-auto px-4 py-12">
+		<section className="max-w-6xl mx-auto px-4 py-12" id='skill-section'>
 			<h2 className="text-3xl font-bold mb-8 text-center">My Skills</h2>
 
 			<div

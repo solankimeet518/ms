@@ -13,26 +13,7 @@ import {
 
 const works: { title: string; href: string; description: string }[] = [];
 
-const services = [
-	{
-		title: 'Custom Website Development',
-		description:
-			'From landing pages to complex web apps, we build responsive, scalable websites using modern technologies.',
-	},
-	{
-		title: 'E-Commerce Solutions',
-		description:
-			'We create secure, user-friendly online stores powered by platforms like Shopify, or custom builds.',
-	},
-	{
-		title: 'Website Maintenance & Optimization',
-		description:
-			'Keep your site fast, secure, and up-to-date with regular updates, performance tuning, and SEO improvements.',
-	},
-];
 export function AppNavigationMenu() {
-	
-
 	return (
 		<NavigationMenu viewport={false}>
 			<NavigationMenuList>
@@ -49,16 +30,14 @@ export function AppNavigationMenu() {
 					</NavigationMenuContent>
 				</NavigationMenuItem>
 				<NavigationMenuItem>
-					<NavigationMenuTrigger>Services</NavigationMenuTrigger>
-					<NavigationMenuContent className="left-auto right-0">
-						<ul className="grid w-[300px] md:w-[350px] lg:w-[400px] gap-2">
-							{services.map((service) => (
-								<ListItem key={service.title} title={service.title} href={''}>
-									{service.description}
-								</ListItem>
-							))}
-						</ul>
-					</NavigationMenuContent>
+					<NavigationMenuLink asChild className={navigationMenuTriggerStyle()}>
+						<a href="#service-section">Services</a>
+					</NavigationMenuLink>
+				</NavigationMenuItem>
+				<NavigationMenuItem>
+					<NavigationMenuLink asChild className={navigationMenuTriggerStyle()}>
+						<a href="#skill-section">Skills</a>
+					</NavigationMenuLink>
 				</NavigationMenuItem>
 				<NavigationMenuItem>
 					<NavigationMenuLink asChild className={navigationMenuTriggerStyle()}>
