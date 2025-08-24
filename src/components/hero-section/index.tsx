@@ -22,7 +22,7 @@ const HeroSection = () => {
 				transition={{ duration: 0.5, ease: 'easeOut' }}
 			>
 				<h1 className="text-4xl font-semibold">Meet Solanki</h1>
-				<p className="mt-2 text-2xl">Software Engineer</p>
+				<p className="mt-2 text-2xl">Full Stack Developer</p>
 
 				<p className="mt-4">
 					Hi, I am a Software Engineer with a passion for building web
