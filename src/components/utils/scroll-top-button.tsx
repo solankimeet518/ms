@@ -20,7 +20,7 @@ const ScrollTopButton = () => {
 			{isAnimated === true && (
 				<Button
 					size="icon"
-					className="rounded-full fixed bottom-20 left-10 md:left-20 z-50"
+					className="rounded-full fixed bottom-20 right-10 md:right-20 z-50"
 					onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
 					asChild
 				>
@@ -34,6 +34,7 @@ const ScrollTopButton = () => {
 							repeatType: 'loop',
 							ease: 'easeInOut',
 						}}
+						initial={{ y: 100 }}
 						exit={{
 							y: 100,
 							transition: { repeat: 0 },
