@@ -21,7 +21,7 @@ const HeroSection = () => {
 				animate={{ transform: 'translateY(0)' }}
 				transition={{ duration: 0.5, ease: 'easeOut' }}
 			>
-				<h1 className="text-4xl font-semibold">Software Enginner</h1>
+				<h1 className="text-4xl font-semibold">Software Enginner  </h1>
 				<p className="mt-2 text-2xl">Software Engineer</p>
 
 				<p className="mt-4">
