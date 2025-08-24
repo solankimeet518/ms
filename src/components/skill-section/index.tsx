@@ -65,7 +65,7 @@ export default function SkillSection() {
 						key={title}
 						whileHover={{
 							scale: 1.05,
-							boxShadow: '0 8px 20px var(--border)',
+							boxShadow: '2px 4px 10px var(--border)',
 						}}
 						transition={{ type: 'spring', stiffness: 200, damping: 20 }}
 						style={{ gridArea }}

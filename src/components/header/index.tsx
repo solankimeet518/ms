@@ -5,7 +5,7 @@ import { Button } from '@/shadcn/ui/button';
 import { useThemeStore } from '@/store/themeStore';
 import { MoonIcon, SunIcon } from 'lucide-react';
 import useWindowDimensions from '@/hooks/use-window-dimensions';
-import MobileNavigationMenu from './mobile-navigation-menu';
+import MobileNavigationSheet from './mobile-navigation-sheet';
 
 const Header = () => {
 	const { scrollY } = useScroll();
@@ -36,7 +36,7 @@ const Header = () => {
 					</AnimatePresence>
 				) : (
 					<AnimatePresence>
-						<MobileNavigationMenu />
+						<MobileNavigationSheet />
 					</AnimatePresence>
 				)}
 
