@@ -9,7 +9,7 @@ const HeroSection = () => {
 		<section className="w-full max-w-[1200px] mx-auto grid cols-1 md:grid-cols-2 gap-2">
 			<div className="col-span-1 self-end justify-self-center">
 				<img
-					src="https://idgjmgkwadbhbihcusee.supabase.co/storage/v1/object/public/assets/photo.jpeg"
+					src=""
 					alt="Logo"
 					className="max-h-[400px]"
 				/>
