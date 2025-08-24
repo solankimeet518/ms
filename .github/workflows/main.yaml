@@ -29,5 +29,5 @@ jobs:
             yarn cache clean
             yarn install  
             yarn build
-            /home/meet/scripts/ms/copy.sh
+            /home/meet/script/ms/copy.sh
           EOF
