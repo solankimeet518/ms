@@ -41,7 +41,7 @@ const works = [
 
 export function AppNavigationMenu() {
   return (
-    <NavigationMenu viewport={false}>
+    <NavigationMenu>
       <NavigationMenuList>
         <NavigationMenuItem>
           <NavigationMenuTrigger>Works</NavigationMenuTrigger>
