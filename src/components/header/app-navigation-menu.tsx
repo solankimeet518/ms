@@ -11,7 +11,28 @@ import {
 	navigationMenuTriggerStyle,
 } from '@/shadcn/ui/navigation-menu';
 
-const works: { title: string; href: string; description: string }[] = [];
+const works = [
+	{
+		title: 'MCP ERP System',
+		href: '#projects-section',
+		description: 'Rust, Axum, SeaORM, and React enterprise accounting platform.',
+	},
+	{
+		title: 'Sumeet Shipping System',
+		href: '#projects-section',
+		description: 'React & Flutter shipping query management software.',
+	},
+	{
+		title: 'Vue Video Editor & FFmpeg',
+		href: '#projects-section',
+		description: 'Web video timeline editor with backend server-side FFmpeg rendering.',
+	},
+	{
+		title: 'Next.js Chat App & Stripe',
+		href: '#projects-section',
+		description: 'Subscription-based socket chat application.',
+	},
+];
 
 export function AppNavigationMenu() {
 	return (
@@ -31,17 +52,12 @@ export function AppNavigationMenu() {
 				</NavigationMenuItem>
 				<NavigationMenuItem>
 					<NavigationMenuLink asChild className={navigationMenuTriggerStyle()}>
-						<a href="#service-section">Services</a>
-					</NavigationMenuLink>
-				</NavigationMenuItem>
-				<NavigationMenuItem>
-					<NavigationMenuLink asChild className={navigationMenuTriggerStyle()}>
 						<a href="#skill-section">Skills</a>
 					</NavigationMenuLink>
 				</NavigationMenuItem>
 				<NavigationMenuItem>
 					<NavigationMenuLink asChild className={navigationMenuTriggerStyle()}>
-						<a href="/docs">Book Now</a>
+						<a href="mailto:solankimeet518+portfolio@gmail.com">Contact</a>
 					</NavigationMenuLink>
 				</NavigationMenuItem>
 			</NavigationMenuList>

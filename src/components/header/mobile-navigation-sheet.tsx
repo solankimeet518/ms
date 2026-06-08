@@ -11,10 +11,9 @@ import { LucideMenu } from 'lucide-react';
 import { motion, AnimatePresence } from 'motion/react';
 
 const navigationItems = [
-	{ title: 'Works', href: '#works' },
-	{ title: 'Services', href: '#service-section' },
+	{ title: 'Works', href: '#projects-section' },
 	{ title: 'Skills', href: '#skill-section' },
-	{ title: 'Book Now', href: '/docs' },
+	{ title: 'Contact', href: 'mailto:solankimeet518+portfolio@gmail.com' },
 ];
 
 const MobileNavigationSheet = () => {
