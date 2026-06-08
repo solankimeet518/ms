@@ -18,9 +18,14 @@ const works = [
 		description: 'Rust, Axum, SeaORM, and React enterprise accounting platform.',
 	},
 	{
-		title: 'Sumeet Shipping System',
+		title: 'Local Client Software',
 		href: '#projects-section',
-		description: 'React & Flutter shipping query management software.',
+		description: 'Docker, DigitalOcean, and Next.js digital transformations.',
+	},
+	{
+		title: 'Next.js Stripe Chat App',
+		href: '#projects-section',
+		description: 'Subscription-based socket chat application with Stripe.',
 	},
 	{
 		title: 'Vue Video Editor & FFmpeg',
@@ -28,9 +33,9 @@ const works = [
 		description: 'Web video timeline editor with backend server-side FFmpeg rendering.',
 	},
 	{
-		title: 'Next.js Chat App & Stripe',
+		title: 'Sumeet Shipping System',
 		href: '#projects-section',
-		description: 'Subscription-based socket chat application.',
+		description: 'React & Flutter shipping query management software.',
 	},
 ];
 

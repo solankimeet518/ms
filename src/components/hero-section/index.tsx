@@ -30,78 +30,70 @@ const HeroSection = () => {
         </p>
 
         <div className="flex flex-wrap gap-4 items-center mb-8">
-          <Button size="lg" className="group" asChild>
+          <Button size="lg" className="group" nativeButton={false} asChild>
             <a href="#journey-section">
               View My Journey
               <ArrowRight className="w-4 h-4 ml-2 transition-transform group-hover:translate-x-1" />
             </a>
           </Button>
-          <Button size="lg" variant="outline" asChild>
+          <Button size="lg" variant="outline" nativeButton={false} asChild>
             <a href="mailto:solankimeet518+portfolio@gmail.com">Contact Me</a>
           </Button>
         </div>
 
         <div className="flex gap-3 items-center">
           <Tooltip>
-            <TooltipTrigger asChild>
-              <Button variant="outline" size="icon" className="rounded-full hover:bg-primary hover:text-primary-foreground transition-all duration-300" asChild>
-                <a
-                  href="https://www.linkedin.com/in/meet518/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  aria-label="LinkedIn"
-                >
-                  <Linkedin className="w-4 h-4" />
-                </a>
-              </Button>
+            <TooltipTrigger render={<Button variant="outline" size="icon" className="rounded-full hover:bg-primary hover:text-muted-foreground transition-all duration-300" nativeButton={false} asChild />}>
+              <a
+                href="https://www.linkedin.com/in/meet518/"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="LinkedIn"
+              >
+                <Linkedin className="w-4 h-4" />
+              </a>
             </TooltipTrigger>
             <TooltipContent>LinkedIn</TooltipContent>
           </Tooltip>
 
           <Tooltip>
-            <TooltipTrigger asChild>
-              <Button variant="outline" size="icon" className="rounded-full hover:bg-primary hover:text-primary-foreground transition-all duration-300" asChild>
-                <a
-                  href="https://github.com/solankimeet518"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  aria-label="GitHub"
-                >
-                  <Github className="w-4 h-4" />
-                </a>
-              </Button>
+            <TooltipTrigger render={<Button variant="outline" size="icon" className="rounded-full hover:bg-primary hover:text-muted-foreground transition-all duration-300" nativeButton={false} asChild />}>
+              <a
+                href="https://github.com/solankimeet518"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="GitHub"
+              >
+                <Github className="w-4 h-4" />
+              </a>
             </TooltipTrigger>
             <TooltipContent>GitHub</TooltipContent>
           </Tooltip>
 
           <Tooltip>
-            <TooltipTrigger asChild>
-              <Button variant="outline" size="icon" className="rounded-full hover:bg-primary hover:text-primary-foreground transition-all duration-300" asChild>
-                <a
-                  href="https://x.com/solankimeet518"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  aria-label="Twitter"
-                >
-                  <Twitter className="w-4 h-4" />
-                </a>
-              </Button>
+            <TooltipTrigger render={<Button variant="outline" size="icon" className="rounded-full hover:bg-primary hover:text-muted-foreground transition-all duration-300" nativeButton={false} asChild />}>
+              <a
+                href="https://x.com/solankimeet518"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Twitter"
+              >
+                <Twitter className="w-4 h-4" />
+              </a>
             </TooltipTrigger>
             <TooltipContent>Twitter</TooltipContent>
           </Tooltip>
 
           <Tooltip>
-            <TooltipTrigger asChild>
-              <Button variant="outline" size="icon" className="rounded-full hover:bg-primary hover:text-primary-foreground transition-all duration-300" asChild>
-                <a
-                  href="https://leetcode.com/u/solankimeet518/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  aria-label="LeetCode"
-                >
-                  <Code2 className="w-4 h-4" />
-                </a>
-              </Button>
+            <TooltipTrigger render={<Button variant="outline" size="icon" className="rounded-full hover:bg-primary hover:text-muted-foreground transition-all duration-300" nativeButton={false} asChild />}>
+              <a
+                href="https://leetcode.com/u/solankimeet518/"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="LeetCode"
+              >
+                <Code2 className="w-4 h-4" />
+              </a>
             </TooltipTrigger>
             <TooltipContent>LeetCode</TooltipContent>
           </Tooltip>

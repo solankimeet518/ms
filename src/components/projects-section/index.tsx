@@ -1,6 +1,6 @@
 import { motion } from 'motion/react';
 import { Card, CardHeader, CardTitle, CardContent, CardAction } from '@/shadcn/ui/card';
-import { FolderGit2, Ship, Film, MessageSquare, Laptop, Receipt } from 'lucide-react';
+import { FolderGit2, Ship, Film, MessageSquare, Laptop, Receipt, ExternalLink } from 'lucide-react';
 
 const projects = [
   {
@@ -10,22 +10,15 @@ const projects = [
     icon: Receipt,
     tech: ['Rust', 'Axum', 'SeaORM', 'React', 'TanStack', 'Redux', 'React Hook Form', 'Zod', 'Axios'],
     category: 'Enterprise / Fintech',
+    url: 'https://mcp.meetitconsultancy.in',
   },
   {
-    title: 'Sumeet Shipping Management System',
-    subtitle: 'College Project / Production Solution',
-    description: 'A custom shipping logistics platform engineered for Sumeet Shipping & Logistics. Features a React web admin panel and a Flutter mobile companion app communicating via Firebase. Admins can manage customer queries, track cargos, and update global web portal settings directly from the mobile app.',
-    icon: Ship,
-    tech: ['React', 'Flutter', 'Firebase', 'NoSQL', 'Cloud Functions'],
-    category: 'Logistics',
-  },
-  {
-    title: 'Cloud-Based Video Editor',
-    subtitle: 'Hupp Technology Pvt. Ltd.',
-    description: 'A browser-based video editing workspace built on Vue.js and Etro.js. Developed a custom backend node module utilizing FFmpeg to process and render complex video tracks server-side, enabling fast video exports that were successfully integrated into NestJS.',
-    icon: Film,
-    tech: ['Vue.js', 'Etro.js', 'Node.js', 'FFmpeg', 'NestJS'],
-    category: 'Media Tech',
+    title: 'Local Client Software & Marketing Suites',
+    subtitle: 'Independent Consulting',
+    description: 'Custom digital transformations for local business clients. Designed and deployed fast marketing portfolios, e-commerce storefronts, and internal business dashboards using Docker, digital ocean, and modern React/Next.js stack.',
+    icon: Laptop,
+    tech: ['React', 'Next.js', 'Axum', 'SeaORM', 'Docker', 'DigitalOcean'],
+    category: 'B2B Services',
   },
   {
     title: 'Next.js Stripe Chat Application',
@@ -36,12 +29,20 @@ const projects = [
     category: 'SaaS / Chat',
   },
   {
-    title: 'Local Client Software & Marketing Suites',
-    subtitle: 'Independent Consulting',
-    description: 'Custom digital transformations for local business clients. Designed and deployed fast marketing portfolios, e-commerce storefronts, and internal business dashboards using Docker, digital ocean, and modern React/Next.js stack.',
-    icon: Laptop,
-    tech: ['React', 'Next.js', 'Axum', 'SeaORM', 'Docker', 'DigitalOcean'],
-    category: 'B2B Services',
+    title: 'Cloud-Based Video Editor',
+    subtitle: 'Hupp Technology Pvt. Ltd.',
+    description: 'A browser-based video editing workspace built on Vue.js and Etro.js. Developed a custom backend node module utilizing FFmpeg to process and render complex video tracks server-side, enabling fast video exports that were successfully integrated into NestJS.',
+    icon: Film,
+    tech: ['Vue.js', 'Etro.js', 'Node.js', 'FFmpeg', 'NestJS'],
+    category: 'Media Tech',
+  },
+  {
+    title: 'Sumeet Shipping Management System',
+    subtitle: 'College Project / Production Solution',
+    description: 'A custom shipping logistics platform engineered for Sumeet Shipping & Logistics. Features a React web admin panel and a Flutter mobile companion app communicating via Firebase. Admins can manage customer queries, track cargos, and update global web portal settings directly from the mobile app.',
+    icon: Ship,
+    tech: ['React', 'Flutter', 'Firebase', 'NoSQL', 'Cloud Functions'],
+    category: 'Logistics',
   },
 ];
 
@@ -69,7 +70,7 @@ export default function ProjectsSection() {
               className="h-full"
             >
               <Card className="h-full bg-card border hover:border-primary/30 transition-all duration-300 relative flex flex-col justify-between overflow-hidden group">
-                <CardHeader className="flex flex-row items-start justify-between">
+                <CardHeader className="flex flex-row items-center justify-between">
                   <div className="flex gap-4 items-center">
                     <div className="p-3 rounded-xl bg-primary/10 text-primary group-hover:bg-primary group-hover:text-primary-foreground transition-all duration-300">
                       <Icon className="w-6 h-6" />
@@ -84,7 +85,19 @@ export default function ProjectsSection() {
                     </div>
                   </div>
                   <CardAction>
-                    <FolderGit2 className="w-5 h-5 text-muted-foreground/50 group-hover:text-primary transition-colors" />
+                    {project.url ? (
+                      <a
+                        href={project.url}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-muted-foreground/50 hover:text-primary transition-all duration-300"
+                        title="View Live Demo"
+                      >
+                        <ExternalLink className="w-5 h-5" />
+                      </a>
+                    ) : (
+                      <FolderGit2 className="w-5 h-5 text-muted-foreground/30" />
+                    )}
                   </CardAction>
                 </CardHeader>
 
