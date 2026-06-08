@@ -21,7 +21,12 @@ const ScrollTopButton = () => {
 				<Button
 					size="icon"
 					className="rounded-full fixed bottom-20 right-10 md:right-20 z-50"
-					onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
+					onClick={() => {
+						window.scrollTo({ top: 0, behavior: 'smooth' });
+						if (window.location.hash) {
+							window.history.pushState('', document.title, window.location.pathname + window.location.search);
+						}
+					}}
 					asChild
 				>
 					<motion.button
