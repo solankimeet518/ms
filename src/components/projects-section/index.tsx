@@ -5,6 +5,7 @@ import { FolderGit2, Ship, Film, MessageSquare, Laptop, Receipt, ExternalLink } 
 const projects = [
   {
     title: 'MCP ERP System',
+    id: 'mcp-erp-system',
     subtitle: 'Current Development Project',
     description: 'A comprehensive Enterprise Resource Planning (ERP) platform designed to handle daily business accounting, invoicing, ledger balances, and transaction tracking. Engineered with a highly scalable Rust backend utilizing Axum and SeaORM, paired with a React frontend managed via Redux, TanStack, React Hook Form, and Zod.',
     icon: Receipt,
@@ -14,6 +15,7 @@ const projects = [
   },
   {
     title: 'Local Client Software & Marketing Suites',
+    id: 'local-client-software',
     subtitle: 'Independent Consulting',
     description: 'Custom digital transformations for local business clients. Designed and deployed fast marketing portfolios, e-commerce storefronts, and internal business dashboards using Docker, digital ocean, and modern React/Next.js stack.',
     icon: Laptop,
@@ -22,6 +24,7 @@ const projects = [
   },
   {
     title: 'Next.js Stripe Chat Application',
+    id: 'nextjs-stripe-chat-app',
     subtitle: 'Personal Production SaaS',
     description: 'A real-time communication platform styled dynamically with Emotion CSS-in-JS. Integrated Stripe checkout APIs to handle subscriber billings and manage subscription models to access locked, premium chat rooms and groups.',
     icon: MessageSquare,
@@ -30,6 +33,7 @@ const projects = [
   },
   {
     title: 'Cloud-Based Video Editor',
+    id: 'cloud-based-video-editor',
     subtitle: 'Hupp Technology Pvt. Ltd.',
     description: 'A browser-based video editing workspace built on Vue.js and Etro.js. Developed a custom backend node module utilizing FFmpeg to process and render complex video tracks server-side, enabling fast video exports that were successfully integrated into NestJS.',
     icon: Film,
@@ -38,6 +42,7 @@ const projects = [
   },
   {
     title: 'Sumeet Shipping Management System',
+    id: 'sumeet-shipping-management-system',
     subtitle: 'College Project / Production Solution',
     description: 'A custom shipping logistics platform engineered for Sumeet Shipping & Logistics. Features a React web admin panel and a Flutter mobile companion app communicating via Firebase. Admins can manage customer queries, track cargos, and update global web portal settings directly from the mobile app.',
     icon: Ship,
@@ -62,12 +67,13 @@ export default function ProjectsSection() {
           return (
             <motion.div
               key={project.title}
+              id={project.id}
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, amount: 0.15 }}
               transition={{ duration: 0.5, delay: i * 0.1 }}
               whileHover={{ y: -6 }}
-              className="h-full"
+              className="h-full scroll-mt-24"
             >
               <Card className="h-full bg-card border hover:border-primary/30 transition-all duration-300 relative flex flex-col justify-between overflow-hidden group">
                 <CardHeader className="flex flex-row items-center justify-between">
