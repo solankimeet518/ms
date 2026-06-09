@@ -27,7 +27,7 @@ const timelineEvents = [
 		color: 'border-violet-500 bg-violet-500/10 text-violet-500',
 	},
 	{
-		date: 'College Days (2020 - 2023)',
+		date: 'College Days (2019 - 2024)',
 		title: 'BCA & MScIT Graduate',
 		subtitle: 'Kutch University & GLS University',
 		description: 'Graduated with a Bachelor of Computer Applications (BCA) from Kutch University, followed by a Master of Science in Information Technology (MScIT) from GLS University. During this time, developed a comprehensive Shipping Management System for Sumeet Shipping & Logistics using React (web), Flutter (mobile), and Firebase (backend).',
