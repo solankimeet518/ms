@@ -15,9 +15,9 @@ const skillCategories = [
     color: 'from-violet-500 to-purple-500',
   },
   {
-    title: 'DevOps & Cloud',
+    title: 'DevOps, Cloud & Databases',
     icon: Cpu,
-    items: ['Docker', 'DigitalOcean', 'GitHub Actions'],
+    items: ['Docker', 'DigitalOcean', 'GitHub Actions', 'Firebase', 'Supabase', 'PostgreSQL', 'MySQL/MariaDB', 'MongoDB'],
     color: 'from-emerald-500 to-teal-500',
   },
   {
