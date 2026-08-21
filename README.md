@@ -12,7 +12,7 @@
 - 🧭 **Type-Safe Routing & Navigation**: Fast client-side routing with **TanStack Router**, responsive desktop navigation menu, and animated mobile drawer sheet.
 - 📅 **Career & Academic Journey Timeline**: Chronological visual roadmap highlighting key milestones, education, and software engineering roles.
 - 🛠️ **Dynamic Skills Matrix**: Categorized tech stack grid showcasing programming languages, frameworks, AI tools, cloud services, and dev tools.
-- 🚀 **Automated CI/CD Deployment**: Declarative `Jenkinsfile` for automated multi-environment building and deployment to Nginx webroots.
+- 🚀 **Automated CI/CD Deployment**: Declarative `Jenkinsfile` for automated production builds and deployment to Nginx webroot.
 
 ---
 
@@ -80,12 +80,11 @@
 
 ## 🔄 CI/CD & Deployment Pipeline (`Jenkinsfile`)
 
-The repository includes a declarative `Jenkinsfile` configured for automated multi-branch CI/CD:
+The repository includes a declarative `Jenkinsfile` configured for automated production deployment:
 
-| Environment | Branch | Target Nginx Webroot | Pipeline Actions |
+| Pipeline Target | Branch | Webroot | Pipeline Actions |
 | :--- | :--- | :--- | :--- |
-| **Production** | `main` / `master` | `/var/www/ms` | `bun install` → `bun run build` → `rsync dist/` → Nginx reload |
-| **Staging** | `staging` | `/var/www/staging.ms` | `bun install` → `bun run build` → `rsync dist/` → Nginx reload |
+| **Production** | `main` | `/var/www/ms` | `bun install` → `bun run build` → `rsync dist/` → Nginx reload |
 | **Pull Requests** | `PR-*` / Feature branches | *Validation Only* | `bun install` → `bun run build` (build integrity check) |
 
 ---

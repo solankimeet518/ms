@@ -12,18 +12,14 @@ pipeline {
         stage('Set Target Environment') {
             steps {
                 script {
-                    // Detect branch name dynamically for Multibranch Pipelines
                     def branch = env.BRANCH_NAME ?: env.GIT_BRANCH ?: 'main'
                     echo "Branch detected: ${branch}"
 
-                    if (branch.contains('staging')) {
-                        env.DEPLOY_PATH = '/var/www/staging.ms'
-                        env.ENV_NAME = 'STAGING'
-                    } else if (branch.contains('main') || branch.contains('master')) {
+                    if (branch.contains('main') || branch.contains('master')) {
                         env.DEPLOY_PATH = '/var/www/ms'
                         env.ENV_NAME = 'PRODUCTION'
                     } else {
-                        // PRs or temporary feature branches (Build & Validate without overwrite)
+                        // PRs or feature branches (Build & Validate without deployment)
                         env.DEPLOY_PATH = ''
                         env.ENV_NAME = 'PR_BUILD'
                     }
@@ -56,17 +52,17 @@ pipeline {
             }
         }
 
-        stage('Deploy to Nginx Webroot') {
+        stage('Deploy to Production Webroot') {
             when {
                 expression { env.DEPLOY_PATH != '' }
             }
             steps {
-                echo "Deploying build output (dist/*) to ${env.DEPLOY_PATH}..."
+                echo "Deploying production build output (dist/*) to ${env.DEPLOY_PATH}..."
                 sh """
                     # Ensure target Nginx directory exists
                     sudo mkdir -p ${env.DEPLOY_PATH}
 
-                    # Sync built assets into designated webroot (/var/www/ms or /var/www/staging.ms)
+                    # Sync built assets into production webroot (/var/www/ms)
                     if [ -d "dist" ]; then
                         sudo rsync -av --delete dist/ ${env.DEPLOY_PATH}/
                     else
