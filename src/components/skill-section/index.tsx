@@ -11,13 +11,13 @@ const skillCategories = [
   {
     title: 'Frameworks & Libraries',
     icon: Layout,
-    items: ['React', 'Next.js', 'Axum', 'SeaORM', 'NestJS', 'Node.js', 'Vue.js', 'Sequelize', 'React Hook Form', 'Formik', 'Zod', 'TanStack Start', 'React Redux'],
+    items: ['React', 'Next.js', 'Axum', 'SeaORM', 'Playwright', 'LangChain', 'NestJS', 'Node.js', 'Vue.js', 'Sequelize', 'React Hook Form', 'Zod', 'TanStack', 'Redux'],
     color: 'from-violet-500 to-purple-500',
   },
   {
-    title: 'DevOps, Cloud & Databases',
+    title: 'DevOps, Cloud & AI',
     icon: Cpu,
-    items: ['Docker', 'DigitalOcean', 'GitHub Actions', 'Firebase', 'Supabase', 'PostgreSQL', 'MySQL/MariaDB', 'MongoDB'],
+    items: ['Docker', 'Ollama', 'Bun', 'DigitalOcean', 'GitHub Actions', 'Firebase', 'Supabase', 'PostgreSQL', 'MySQL/MariaDB', 'MongoDB'],
     color: 'from-emerald-500 to-teal-500',
   },
   {

@@ -13,6 +13,11 @@ import {
 
 const works = [
   {
+    title: 'Auto Job Apply & LinkedIn Bot',
+    href: '#auto-job-apply',
+    description: 'AI-driven job application and automated LinkedIn outreach bot using Playwright & Ollama.',
+  },
+  {
     title: 'MCP ERP System',
     href: '#mcp-erp-system',
     description: 'Rust, Axum, SeaORM, and React enterprise accounting platform.',
