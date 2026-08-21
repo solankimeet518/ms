@@ -1,8 +1,18 @@
 import { motion } from 'motion/react';
 import { Card, CardHeader, CardTitle, CardContent, CardAction } from '@/shadcn/ui/card';
-import { FolderGit2, Ship, Film, MessageSquare, Laptop, Receipt, ExternalLink } from 'lucide-react';
+import { FolderGit2, Ship, Film, MessageSquare, Laptop, Receipt, ExternalLink, Bot } from 'lucide-react';
 
 const projects = [
+  {
+    title: 'Auto Job Apply & LinkedIn Bot',
+    id: 'auto-job-apply',
+    subtitle: 'Open-Source AI & Automation Platform',
+    description: 'An intelligent AI-powered automation platform that streamlines job hunting and networking. Features automated PDF resume parsing, AI screening form completion on Indeed, and multi-faceted targeted recruiter outreach on LinkedIn with personalized local LLM connection notes using Ollama and Playwright.',
+    icon: Bot,
+    tech: ['Bun', 'Playwright', 'React', 'Vite', 'Ollama', 'LangChain', 'Tailwind CSS'],
+    category: 'AI & Automation',
+    url: 'https://github.com/solankimeet518/auto_job_apply',
+  },
   {
     title: 'MCP ERP System',
     id: 'mcp-erp-system',
@@ -57,7 +67,7 @@ export default function ProjectsSection() {
       <div className="text-center max-w-[800px] mx-auto mb-16">
         <h2 className="text-3xl md:text-4xl font-bold mb-4">Featured Projects</h2>
         <p className="text-muted-foreground text-base md:text-lg">
-          A showcase of shipping systems, media editors, and SaaS products I have designed and deployed.
+          A showcase of AI automation bots, ERP systems, media editors, and SaaS products I have designed and deployed.
         </p>
       </div>
 
